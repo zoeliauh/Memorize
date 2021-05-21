@@ -9,24 +9,20 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        return HStack(content: {
-            ForEach(0..<4, content: { index in
-                ZStack(content: {
+        HStack {
+            ForEach(0..<4) { index in
+                ZStack {
                     RoundedRectangle(cornerRadius: 10.0).fill(Color.white)
                     RoundedRectangle(cornerRadius: 10.0).stroke(lineWidth: 3)
                     Text("👻")
-                })
-            })
-        })
+                }
+            }
+        }
             .padding()
             .foregroundColor(Color.orange)
             .font(Font.largeTitle)
     }
 }
-
-
-
-
 
 
 
