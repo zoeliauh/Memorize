@@ -56,10 +56,10 @@
 		6B4640BE26575F0000EF690B /* Memorize */ = {
 			isa = PBXGroup;
 			children = (
+				6B4640D42659293200EF690B /* viewmodel */,
+				6B4640D32659292A00EF690B /* model */,
+				6B4640D22659292000EF690B /* view */,
 				6B4640BF26575F0000EF690B /* MemorizeApp.swift */,
-				6B4640C126575F0000EF690B /* ContentView.swift */,
-				6B4640CE2658C40800EF690B /* MemoryGame.swift */,
-				6B4640D0265904ED00EF690B /* EmojiMemoryGame.swift */,
 				6B4640C326575F0200EF690B /* Assets.xcassets */,
 				6B4640C826575F0200EF690B /* Info.plist */,
 				6B4640C526575F0200EF690B /* Preview Content */,
@@ -73,6 +73,30 @@
 				6B4640C626575F0200EF690B /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		6B4640D22659292000EF690B /* view */ = {
+			isa = PBXGroup;
+			children = (
+				6B4640C126575F0000EF690B /* ContentView.swift */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		6B4640D32659292A00EF690B /* model */ = {
+			isa = PBXGroup;
+			children = (
+				6B4640CE2658C40800EF690B /* MemoryGame.swift */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		6B4640D42659293200EF690B /* viewmodel */ = {
+			isa = PBXGroup;
+			children = (
+				6B4640D0265904ED00EF690B /* EmojiMemoryGame.swift */,
+			);
+			path = viewmodel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
