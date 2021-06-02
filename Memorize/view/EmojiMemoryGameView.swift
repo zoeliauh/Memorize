@@ -21,6 +21,8 @@ struct EmojiMemoryGameView: View {
         }
             .padding()
             .foregroundColor(Color.orange)
+            //.font(.largeTitle) 移至 GeometryReader 下定義, 可以設定長寬
+            //.font(.system(size: 35)) 用 font 的方式下定義，只能設定大小，粗斜體...(我猜測啦)
     }
 }
 
@@ -38,7 +40,7 @@ struct CardView: View {
                     RoundedRectangle(cornerRadius: connerRadius).fill()
                 }
             }
-            .font(Font.system(size: min(geometry.size.width, geometry.size.height) * fontScaleFactor))
+            .font(.system(size: min(geometry.size.width, geometry.size.height) * fontScaleFactor))
         }
     }
     
