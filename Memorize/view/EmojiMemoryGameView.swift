@@ -40,19 +40,21 @@ struct CardView: View {
                     RoundedRectangle(cornerRadius: connerRadius).fill()
                 }
             }
-            .font(.system(size: min(geometry.size.width, geometry.size.height) * fontScaleFactor))
+            .font(.system(size: fontSize(outSize: geometry.size)))
         }
     }
     
-    //mark: Drawing Constants
     
-    let connerRadius: CGFloat = 10.0
+    //mark: Drawing Constants
+
+    let connerRadius: CGFloat = 10
     let edgeLineWidth: CGFloat = 3
-    let fontScaleFactor: CGFloat = 0.75
+    //let fontScaleFactor: CGFloat = 0.75
+    
+    func fontSize(outSize size: CGSize) -> CGFloat {
+        min(size.width, size.height) * 0.75 //fontScaleFactor
+    }
 }
-
-
-
 
 
 
@@ -64,3 +66,4 @@ struct ContentView_Previews: PreviewProvider {
         EmojiMemoryGameView(viewModel: EmojiMemoryGame())
     }
 }
+
