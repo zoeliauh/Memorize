@@ -11,16 +11,14 @@ struct EmojiMemoryGameView: View {
     @ObservedObject var viewModel: EmojiMemoryGame
     
     var body: some View {
-        HStack {
-            ForEach(viewModel.cards) { card in
+        Grid (viewModel.cards) { card in
                 CardView(card: card).onTapGesture {
                     self.viewModel.choose(card: card)
                 }
-                .aspectRatio(0.1, contentMode: .fit)
+            .padding(5)
             }
-        }
-            .padding()
-            .foregroundColor(Color.orange)
+                .padding()
+                .foregroundColor(Color.orange)
             //.font(.largeTitle) 移至 GeometryReader 下定義, 可以設定長寬
             //.font(.system(size: 35)) 用 font 的方式下定義，只能設定大小，粗斜體...(我猜測啦)
     }
@@ -47,7 +45,7 @@ struct CardView: View {
     
     //mark: Drawing Constants
 
-    let connerRadius: CGFloat = 10
+    let connerRadius: CGFloat = 10.5
     let edgeLineWidth: CGFloat = 3
     //let fontScaleFactor: CGFloat = 0.75
     
