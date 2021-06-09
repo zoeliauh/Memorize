@@ -47,11 +47,11 @@ struct CardView: View {
     
     //mark: Drawing Constants
 
-    let connerRadius: CGFloat = 10.5
-    let edgeLineWidth: CGFloat = 3
+    private let connerRadius: CGFloat = 10.5
+    private let edgeLineWidth: CGFloat = 3
     //let fontScaleFactor: CGFloat = 0.75
     
-    func fontSize(for size: CGSize) -> CGFloat {
+    private func fontSize(for size: CGSize) -> CGFloat {
         min(size.width, size.height) * 0.75 //fontScaleFactor
     }
 }
